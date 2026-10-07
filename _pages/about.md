@@ -16,194 +16,471 @@ latest_posts:
   enabled: false
 ---
 
-<div class="row">
-  <div class="col-lg-9">
-    <p class="text-uppercase small mb-2" style="letter-spacing:.16em; font-weight:600; opacity:.68;">
-      Computational Cancer Immunology
-    </p>
-    <h2 style="font-size:clamp(2.15rem,5vw,3.6rem); line-height:1.06; margin-bottom:1.15rem;">
-      From high-dimensional immune data<br>
-      <span style="opacity:.62;">to mechanisms, biomarkers, and response.</span>
-    </h2>
-    <p class="lead" style="max-width:850px;">
-      I study <strong>CAR-T cell biology and tumor–immune interactions</strong> using
-      single-cell genomics, immune-repertoire analysis, cancer genomics, and multimodal
-      translational data.
-    </p>
-    <p style="max-width:860px;">
-      My work focuses on the structure and evolution of immune-cell states, clonal
-      persistence, and determinants of therapeutic response — with an emphasis on analyses
-      that connect mechanistic biology to clinically meaningful questions.
-    </p>
-  </div>
-</div>
+<style>
+  .zz-hero {
+    padding: 1.4rem 0 2.8rem;
+    max-width: 900px;
+  }
 
-<div class="mt-5 mb-5">
-  <div class="d-flex justify-content-between align-items-end flex-wrap mb-4">
+  .zz-eyebrow {
+    font-size: .76rem;
+    text-transform: uppercase;
+    letter-spacing: .16em;
+    font-weight: 700;
+    opacity: .58;
+    margin-bottom: .8rem;
+  }
+
+  .zz-hero-title {
+    font-family: "Roboto Slab", Georgia, serif;
+    font-size: clamp(2.35rem, 5vw, 4.25rem);
+    line-height: 1.04;
+    font-weight: 400;
+    letter-spacing: -.025em;
+    margin: 0 0 1.25rem;
+    max-width: 900px;
+  }
+
+  .zz-hero-title .muted {
+    opacity: .56;
+  }
+
+  .zz-lead {
+    font-size: 1.16rem;
+    line-height: 1.65;
+    max-width: 820px;
+    margin-bottom: .8rem;
+  }
+
+  .zz-sublead {
+    max-width: 820px;
+    line-height: 1.7;
+    opacity: .78;
+  }
+
+  .zz-section-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    flex-wrap: wrap;
+    gap: .75rem;
+    margin-bottom: 1.15rem;
+  }
+
+  .zz-section-head h3 {
+    font-family: "Roboto Slab", Georgia, serif;
+    font-weight: 400;
+    margin: 0;
+  }
+
+  .zz-section-note {
+    font-size: .82rem;
+    opacity: .5;
+    margin: 0;
+  }
+
+  .zz-cap-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .zz-cap-card {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(127,127,127,.18);
+    border-radius: 20px;
+    padding: 24px 24px 22px;
+    min-height: 250px;
+    background: rgba(127,127,127,.025);
+  }
+
+  .zz-cap-card::before {
+    content: "";
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 4px;
+    background: var(--accent);
+  }
+
+  .zz-cap-card::after {
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    right: -80px;
+    top: -90px;
+    border-radius: 50%;
+    background: var(--glow);
+    pointer-events: none;
+  }
+
+  .zz-cap-kicker {
+    color: var(--accent);
+    font-size: .73rem;
+    text-transform: uppercase;
+    letter-spacing: .14em;
+    font-weight: 700;
+    margin-bottom: .85rem;
+  }
+
+  .zz-cap-card h4 {
+    font-family: "Roboto Slab", Georgia, serif;
+    font-size: 1.32rem;
+    line-height: 1.28;
+    font-weight: 400;
+    margin-bottom: .85rem;
+    max-width: 90%;
+  }
+
+  .zz-cap-card p {
+    line-height: 1.65;
+    margin-bottom: 1rem;
+    opacity: .76;
+  }
+
+  .zz-question {
+    border-top: 1px solid rgba(127,127,127,.16);
+    padding-top: .9rem;
+    margin-top: auto;
+    font-size: .9rem;
+    line-height: 1.55;
+  }
+
+  .zz-question strong {
+    color: var(--accent);
+    font-weight: 650;
+  }
+
+  .zz-flow {
+    margin-top: 1.4rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border: 1px solid rgba(127,127,127,.16);
+    border-radius: 18px;
+    overflow: hidden;
+  }
+
+  .zz-flow-item {
+    padding: 18px 18px 16px;
+    min-height: 125px;
+    position: relative;
+  }
+
+  .zz-flow-item + .zz-flow-item {
+    border-left: 1px solid rgba(127,127,127,.14);
+  }
+
+  .zz-flow-step {
+    font-size: .68rem;
+    text-transform: uppercase;
+    letter-spacing: .13em;
+    opacity: .48;
+    margin-bottom: .45rem;
+  }
+
+  .zz-flow-item strong {
+    display: block;
+    font-size: .98rem;
+    margin-bottom: .35rem;
+  }
+
+  .zz-flow-item span {
+    display: block;
+    font-size: .83rem;
+    line-height: 1.5;
+    opacity: .66;
+  }
+
+  .zz-feature {
+    border: 1px solid rgba(127,127,127,.16);
+    border-radius: 22px;
+    padding: 22px;
+    background: linear-gradient(135deg, rgba(15,118,110,.055), rgba(79,70,229,.025) 55%, rgba(190,18,60,.025));
+  }
+
+  .zz-feature-label {
+    text-transform: uppercase;
+    letter-spacing: .13em;
+    font-size: .72rem;
+    font-weight: 700;
+    opacity: .52;
+  }
+
+  .zz-feature h4 {
+    font-family: "Roboto Slab", Georgia, serif;
+    font-weight: 400;
+    line-height: 1.35;
+  }
+
+  .zz-evidence {
+    border-left: 3px solid #0f766e;
+    padding-left: 15px;
+    margin: 1rem 0 1.1rem;
+  }
+
+  .zz-links a {
+    margin-right: 1rem;
+    white-space: nowrap;
+  }
+
+  .zz-question-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .zz-question-card {
+    padding: 18px 4px 14px 18px;
+    border-left: 3px solid var(--accent);
+  }
+
+  .zz-question-card h5 {
+    font-family: "Roboto Slab", Georgia, serif;
+    font-weight: 400;
+    margin-bottom: .55rem;
+  }
+
+  .zz-question-card p {
+    margin: 0;
+    line-height: 1.6;
+    opacity: .74;
+  }
+
+  @media (max-width: 820px) {
+    .zz-cap-grid,
+    .zz-question-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .zz-flow {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .zz-flow-item + .zz-flow-item {
+      border-left: 0;
+    }
+
+    .zz-flow-item:nth-child(even) {
+      border-left: 1px solid rgba(127,127,127,.14);
+    }
+
+    .zz-flow-item:nth-child(n+3) {
+      border-top: 1px solid rgba(127,127,127,.14);
+    }
+  }
+
+  @media (max-width: 520px) {
+    .zz-flow {
+      grid-template-columns: 1fr;
+    }
+
+    .zz-flow-item:nth-child(even) {
+      border-left: 0;
+    }
+
+    .zz-flow-item + .zz-flow-item {
+      border-top: 1px solid rgba(127,127,127,.14);
+    }
+  }
+</style>
+
+<section class="zz-hero">
+  <div class="zz-eyebrow">Research focus</div>
+  <h1 class="zz-hero-title">
+    I use immune data to explain<br>
+    <span class="muted">why cellular therapies persist, respond, or fail.</span>
+  </h1>
+
+  <p class="zz-lead">
+    My work centers on <strong>CAR-T cell biology, single-cell genomics, immune repertoires,
+    and translational cancer research</strong>.
+  </p>
+
+  <p class="zz-sublead">
+    I combine longitudinal molecular, cellular, and clinical evidence to reconstruct immune-cell
+    states, track clonal evolution, and identify mechanisms associated with therapeutic response.
+  </p>
+</section>
+
+<section class="mb-5">
+  <div class="zz-section-head">
     <div>
-      <p class="text-uppercase small mb-1" style="letter-spacing:.14em; font-weight:600; opacity:.58;">
-        Research architecture
-      </p>
-      <h3 class="mb-0">How I move from data to biological insight</h3>
+      <div class="zz-eyebrow mb-1">What I can do</div>
+      <h3>Turn complex datasets into biological answers</h3>
     </div>
-    <p class="small mb-1 mt-2" style="opacity:.55;">
-      question-driven · multimodal · longitudinal · translational
-    </p>
+    <p class="zz-section-note">capabilities, not software lists</p>
   </div>
 
-  <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(215px,1fr)); gap:14px;">
+  <div class="zz-cap-grid">
 
-    <div style="border:1px solid rgba(127,127,127,.20); border-radius:18px; padding:22px; min-height:235px;">
-      <div class="small text-uppercase mb-3" style="letter-spacing:.13em; opacity:.48;">01 · Observe</div>
-      <h4 class="mb-3" style="font-size:1.14rem;">Multimodal immune systems</h4>
-      <p class="small" style="opacity:.73;">
-        Profile tumor and immune biology across complementary molecular and cellular measurements.
+    <div class="zz-cap-card" style="--accent:#0f766e; --glow:rgba(15,118,110,.08);">
+      <div class="zz-cap-kicker">Cell-state biology</div>
+      <h4>Reconstruct how immune-cell states change across treatment and time</h4>
+      <p>
+        Resolve heterogeneous T-cell populations, identify memory, activation, exhaustion,
+        proliferation, and other functional programs, and compare those states across conditions
+        or longitudinal time points.
       </p>
-      <p class="small mb-0" style="line-height:1.8;">
-        <strong>Single-cell RNA-seq</strong><br>
-        TCR / VDJ repertoires<br>
-        Flow cytometry<br>
-        Bulk transcriptomics<br>
-        Cancer genomics & proteomics
-      </p>
+      <div class="zz-question">
+        <strong>Questions I can answer:</strong><br>
+        Which cellular programs emerge, persist, disappear, or become enriched after therapy?
+      </div>
     </div>
 
-    <div style="border:1px solid rgba(127,127,127,.20); border-radius:18px; padding:22px; min-height:235px;">
-      <div class="small text-uppercase mb-3" style="letter-spacing:.13em; opacity:.48;">02 · Resolve</div>
-      <h4 class="mb-3" style="font-size:1.14rem;">Cell states & clonal structure</h4>
-      <p class="small" style="opacity:.73;">
-        Decompose heterogeneous immune populations into interpretable cellular and clonal programs.
+    <div class="zz-cap-card" style="--accent:#4f46e5; --glow:rgba(79,70,229,.08);">
+      <div class="zz-cap-kicker">Clonal dynamics</div>
+      <h4>Track which T-cell clones expand, persist, and dominate over time</h4>
+      <p>
+        Link TCR clonotypes to cellular phenotypes, quantify repertoire diversity and dominance,
+        and follow shared or persistent clones across longitudinal samples.
       </p>
-      <p class="small mb-0" style="line-height:1.8;">
-        Cell-state annotation<br>
-        Longitudinal clonotype tracking<br>
-        Repertoire diversity<br>
-        Unsupervised clustering<br>
-        Regulon & trajectory analysis
-      </p>
+      <div class="zz-question">
+        <strong>Questions I can answer:</strong><br>
+        Which clones survive years later, and what cellular states characterize those persistent clones?
+      </div>
     </div>
 
-    <div style="border:1px solid rgba(127,127,127,.20); border-radius:18px; padding:22px; min-height:235px;">
-      <div class="small text-uppercase mb-3" style="letter-spacing:.13em; opacity:.48;">03 · Infer</div>
-      <h4 class="mb-3" style="font-size:1.14rem;">Molecular programs & associations</h4>
-      <p class="small" style="opacity:.73;">
-        Quantify biological differences and identify pathways, signatures, and outcome-associated signals.
+    <div class="zz-cap-card" style="--accent:#c76a12; --glow:rgba(199,106,18,.08);">
+      <div class="zz-cap-kicker">Response & outcome</div>
+      <h4>Connect molecular and cellular features to therapeutic response</h4>
+      <p>
+        Test whether genomic alterations, proteins, immune states, or other biomarkers are associated
+        with response, relapse, toxicity, progression, or survival.
       </p>
-      <p class="small mb-0" style="line-height:1.8;">
-        Differential expression<br>
-        Pathway & gene-set analysis<br>
-        Survival modeling<br>
-        Clinical association testing<br>
-        Constraint-based systems biology
-      </p>
+      <div class="zz-question">
+        <strong>Questions I can answer:</strong><br>
+        What separates responders from non-responders, and which signals remain meaningful after clinical adjustment?
+      </div>
     </div>
 
-    <div style="border:1px solid rgba(127,127,127,.20); border-radius:18px; padding:22px; min-height:235px;">
-      <div class="small text-uppercase mb-3" style="letter-spacing:.13em; opacity:.48;">04 · Translate</div>
-      <h4 class="mb-3" style="font-size:1.14rem;">Mechanism & therapeutic response</h4>
-      <p class="small" style="opacity:.73;">
-        Integrate molecular and clinical evidence into hypotheses relevant to cellular therapy.
+    <div class="zz-cap-card" style="--accent:#b4235a; --glow:rgba(180,35,90,.075);">
+      <div class="zz-cap-kicker">Multimodal integration</div>
+      <h4>Integrate independent data types into a coherent mechanistic story</h4>
+      <p>
+        Bring together single-cell transcriptomics, immune repertoires, flow cytometry,
+        bulk RNA-seq, cancer genomics, proteomics, and clinical variables to test whether
+        independent signals converge on the same biology.
       </p>
-      <p class="small mb-0" style="line-height:1.8;">
-        Persistence & memory<br>
-        Exhaustion & activation<br>
-        Response biomarkers<br>
-        Resistance mechanisms<br>
-        Patient-level interpretation
-      </p>
+      <div class="zz-question">
+        <strong>Questions I can answer:</strong><br>
+        Do different assays support the same mechanism, and which evidence is most clinically interpretable?
+      </div>
     </div>
 
   </div>
 
-  <div class="mt-4" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:12px;">
-    <div style="padding:14px 16px; border-top:2px solid currentColor;">
-      <div class="small text-uppercase mb-1" style="letter-spacing:.1em; opacity:.48;">Single-cell & repertoire</div>
-      <div class="small">Seurat · Harmony · scRepertoire · SCENIC · UMAP</div>
+  <div class="zz-flow">
+    <div class="zz-flow-item">
+      <div class="zz-flow-step">01 · Define</div>
+      <strong>Start with the biological question</strong>
+      <span>Persistence, clonal evolution, response, resistance, or mechanism.</span>
     </div>
-    <div style="padding:14px 16px; border-top:2px solid currentColor;">
-      <div class="small text-uppercase mb-1" style="letter-spacing:.1em; opacity:.48;">Transcriptomic & pathway analysis</div>
-      <div class="small">DESeq2 · edgeR · limma · GSEA / fgsea · GSVA</div>
+    <div class="zz-flow-item">
+      <div class="zz-flow-step">02 · Resolve</div>
+      <strong>Extract interpretable structure</strong>
+      <span>Cell states, clones, molecular programs, clinical subgroups, longitudinal change.</span>
     </div>
-    <div style="padding:14px 16px; border-top:2px solid currentColor;">
-      <div class="small text-uppercase mb-1" style="letter-spacing:.1em; opacity:.48;">Clinical & systems modeling</div>
-      <div class="small">Cox / Kaplan–Meier · regression · FlowSOM · COBRApy</div>
+    <div class="zz-flow-item">
+      <div class="zz-flow-step">03 · Test</div>
+      <strong>Quantify the evidence</strong>
+      <span>Differential signals, associations, pathways, survival, and cross-modal agreement.</span>
+    </div>
+    <div class="zz-flow-item">
+      <div class="zz-flow-step">04 · Translate</div>
+      <strong>Return to the biology</strong>
+      <span>Mechanistic interpretation, response hypotheses, and publication-ready evidence.</span>
     </div>
   </div>
-</div>
+</section>
 
 <hr>
 
-### Featured work
-
-<div class="row align-items-center">
-  <div class="col-md-5">
-    <a href="https://doi.org/10.1038/s41591-026-04578-1">
-      <img src="{{ '/assets/img/nature-figure3.jpg' | relative_url }}" class="img-fluid rounded" alt="Representative analysis from the long-term CAR-T study">
-    </a>
-    <p class="caption mt-2"><strong>Representative analysis example.</strong> Figure 3 from the study.</p>
-  </div>
-
-  <div class="col-md-7">
-    <p class="text-uppercase small mb-1" style="letter-spacing:.11em; opacity:.55;">
-      Selected publication
-    </p>
-    <h4><em>Decade-long persistence of CD19 CAR T cells in B cell lymphomas</em></h4>
-    <p><strong>Nature Medicine · 2026 · Co-author</strong></p>
-
-    <p>
-      I performed the <strong>computational analysis for the study</strong>, integrating
-      single-cell transcriptomic and immune-repertoire data to characterize long-term
-      persisting CAR-T cells.
-    </p>
-
-    <div style="border-left:3px solid currentColor; padding-left:16px; margin:18px 0;">
-      <p class="mb-1"><strong>Longitudinal CAR-T biology</strong></p>
-      <p class="small mb-0" style="opacity:.74;">
-        Cell-state evolution · CAR<sup>+</sup>/CAR<sup>−</sup> comparisons · peak vs year 9.3 ·
-        differential expression · pathway programs · TCR clonotype dynamics
-      </p>
+<section class="my-5">
+  <div class="zz-section-head">
+    <div>
+      <div class="zz-eyebrow mb-1">Featured work</div>
+      <h3>Long-term CAR-T persistence</h3>
     </div>
-
-    <blockquote>“Z.Z. performed the computational analysis.” — Author Contributions</blockquote>
-
-    <p>
-      <a href="https://doi.org/10.1038/s41591-026-04578-1"><strong>Paper ↗</strong></a>
-      &nbsp;·&nbsp;
-      <a href="https://github.com/EDCAKDC/GSE311890-CART-analysis"><strong>Analysis code ↗</strong></a>
-      &nbsp;·&nbsp;
-      <a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE311890"><strong>GEO ↗</strong></a>
-    </p>
   </div>
-</div>
+
+  <div class="zz-feature">
+    <div class="row align-items-center g-4">
+      <div class="col-md-5">
+        <a href="https://doi.org/10.1038/s41591-026-04578-1">
+          <img
+            src="{{ '/assets/img/nature-figure3.jpg' | relative_url }}"
+            class="img-fluid rounded"
+            alt="Representative analysis from the long-term CAR-T study"
+          >
+        </a>
+        <p class="caption mt-2 mb-0">
+          Representative analysis example · Figure 3 from the study
+        </p>
+      </div>
+
+      <div class="col-md-7">
+        <div class="zz-feature-label mb-2">Nature Medicine · 2026 · Co-author</div>
+        <h4><em>Decade-long persistence of CD19 CAR T cells in B cell lymphomas</em></h4>
+
+        <p>
+          I performed the <strong>computational analysis for the study</strong>, integrating
+          single-cell transcriptomic and immune-repertoire data to characterize long-term
+          persisting CAR-T cells.
+        </p>
+
+        <div class="zz-evidence">
+          <strong>What the analysis addressed</strong>
+          <div class="small mt-1" style="opacity:.74;">
+            How CAR-T cell states changed from peak expansion to year 9.3, which transcriptional
+            programs distinguished persistent cells, and how clonotype structure evolved over time.
+          </div>
+        </div>
+
+        <blockquote>“Z.Z. performed the computational analysis.” — Author Contributions</blockquote>
+
+        <p class="zz-links mb-0">
+          <a href="https://doi.org/10.1038/s41591-026-04578-1"><strong>Paper ↗</strong></a>
+          <a href="https://github.com/EDCAKDC/GSE311890-CART-analysis"><strong>Analysis code ↗</strong></a>
+          <a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE311890"><strong>GEO ↗</strong></a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
 
 <hr>
 
-<div class="d-flex justify-content-between align-items-end flex-wrap mb-3">
-  <div>
-    <p class="text-uppercase small mb-1" style="letter-spacing:.12em; opacity:.55;">Research directions</p>
-    <h3 class="mb-0">Questions I care about</h3>
+<section class="my-5">
+  <div class="zz-section-head">
+    <div>
+      <div class="zz-eyebrow mb-1">Research questions</div>
+      <h3>The problems I want to keep working on</h3>
+    </div>
   </div>
-</div>
 
-<div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:18px;">
-  <div style="border-left:3px solid currentColor; padding:6px 0 6px 18px;">
-    <h5>Persistence</h5>
-    <p class="mb-0">What allows engineered T cells to persist, adapt, and remain functional over years?</p>
-  </div>
-  <div style="border-left:3px solid currentColor; padding:6px 0 6px 18px;">
-    <h5>Clonal evolution</h5>
-    <p class="mb-0">How do immune repertoires and dominant clonotypes change across treatment and time?</p>
-  </div>
-  <div style="border-left:3px solid currentColor; padding:6px 0 6px 18px;">
-    <h5>Response & resistance</h5>
-    <p class="mb-0">Which molecular and cellular features explain therapeutic response, failure, or relapse?</p>
-  </div>
-</div>
+  <div class="zz-question-grid">
+    <div class="zz-question-card" style="--accent:#0f766e;">
+      <h5>Persistence</h5>
+      <p>What allows engineered T cells to persist, adapt, and remain functional over years?</p>
+    </div>
 
-<p class="mt-4">
-  <a href="{{ '/research/' | relative_url }}"><strong>Research overview →</strong></a>
-  &nbsp;&nbsp;
-  <a href="{{ '/projects/' | relative_url }}"><strong>Selected projects →</strong></a>
-  &nbsp;&nbsp;
-  <a href="{{ '/publications/' | relative_url }}"><strong>Publications →</strong></a>
-</p>
+    <div class="zz-question-card" style="--accent:#4f46e5;">
+      <h5>Clonal evolution</h5>
+      <p>How do immune repertoires and dominant clonotypes change across treatment and time?</p>
+    </div>
+
+    <div class="zz-question-card" style="--accent:#b4235a;">
+      <h5>Response & resistance</h5>
+      <p>Which molecular and cellular features explain therapeutic response, failure, or relapse?</p>
+    </div>
+  </div>
+
+  <p class="mt-4">
+    <a href="{{ '/research/' | relative_url }}"><strong>Research overview →</strong></a>
+    &nbsp;&nbsp;
+    <a href="{{ '/projects/' | relative_url }}"><strong>Selected projects →</strong></a>
+    &nbsp;&nbsp;
+    <a href="{{ '/publications/' | relative_url }}"><strong>Publications →</strong></a>
+  </p>
+</section>
