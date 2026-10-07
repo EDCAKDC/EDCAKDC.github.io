@@ -23,11 +23,12 @@ latest_posts:
   }
 
   .zz-eyebrow {
-    font-size: .76rem;
+    font-family: "Roboto", Arial, sans-serif;
+    font-size: .78rem;
     text-transform: uppercase;
-    letter-spacing: .16em;
+    letter-spacing: .14em;
     font-weight: 700;
-    opacity: .58;
+    opacity: .66;
     margin-bottom: .8rem;
   }
 
@@ -46,16 +47,19 @@ latest_posts:
   }
 
   .zz-lead {
-    font-size: 1.16rem;
-    line-height: 1.65;
+    font-family: "Roboto", Arial, sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.62;
     max-width: 820px;
-    margin-bottom: .8rem;
+    margin-bottom: .9rem;
   }
 
   .zz-sublead {
+    font-family: "Roboto", Arial, sans-serif;
     max-width: 820px;
-    line-height: 1.7;
-    opacity: .78;
+    font-size: 1rem;
+    line-height: 1.72;
+    opacity: .84;
   }
 
   .zz-section-head {
@@ -68,14 +72,19 @@ latest_posts:
   }
 
   .zz-section-head h3 {
-    font-family: "Roboto Slab", Georgia, serif;
-    font-weight: 400;
+    font-family: "Roboto", Arial, sans-serif;
+    font-size: clamp(1.55rem, 2.6vw, 2.05rem);
+    line-height: 1.25;
+    font-weight: 500;
+    letter-spacing: -.015em;
     margin: 0;
   }
 
   .zz-section-note {
-    font-size: .82rem;
-    opacity: .5;
+    font-family: "Roboto", Arial, sans-serif;
+    font-size: .88rem;
+    line-height: 1.45;
+    opacity: .62;
     margin: 0;
   }
 
@@ -116,40 +125,47 @@ latest_posts:
   }
 
   .zz-cap-kicker {
+    font-family: "Roboto", Arial, sans-serif;
     color: var(--accent);
-    font-size: .73rem;
+    font-size: .76rem;
     text-transform: uppercase;
-    letter-spacing: .14em;
+    letter-spacing: .12em;
     font-weight: 700;
-    margin-bottom: .85rem;
+    margin-bottom: .9rem;
   }
 
   .zz-cap-card h4 {
-    font-family: "Roboto Slab", Georgia, serif;
-    font-size: 1.32rem;
-    line-height: 1.28;
-    font-weight: 400;
-    margin-bottom: .85rem;
-    max-width: 90%;
+    font-family: "Roboto", Arial, sans-serif;
+    font-size: 1.3rem;
+    line-height: 1.34;
+    font-weight: 500;
+    letter-spacing: -.01em;
+    margin-bottom: .9rem;
+    max-width: 94%;
   }
 
   .zz-cap-card p {
-    line-height: 1.65;
+    font-family: "Roboto", Arial, sans-serif;
+    font-size: .98rem;
+    line-height: 1.72;
     margin-bottom: 1rem;
-    opacity: .76;
+    opacity: .86;
   }
 
   .zz-question {
-    border-top: 1px solid rgba(127,127,127,.16);
-    padding-top: .9rem;
-    margin-top: auto;
-    font-size: .9rem;
-    line-height: 1.55;
+    font-family: "Roboto", Arial, sans-serif;
+    margin-top: 1.05rem;
+    padding: .9rem 1rem;
+    border: 0;
+    border-radius: 12px;
+    background: color-mix(in srgb, var(--accent) 7%, transparent);
+    font-size: .94rem;
+    line-height: 1.58;
   }
 
   .zz-question strong {
     color: var(--accent);
-    font-weight: 650;
+    font-weight: 700;
   }
 
   .zz-flow {
@@ -172,24 +188,29 @@ latest_posts:
   }
 
   .zz-flow-step {
-    font-size: .68rem;
+    font-family: "Roboto", Arial, sans-serif;
+    font-size: .72rem;
     text-transform: uppercase;
-    letter-spacing: .13em;
-    opacity: .48;
-    margin-bottom: .45rem;
+    letter-spacing: .11em;
+    opacity: .58;
+    margin-bottom: .5rem;
   }
 
   .zz-flow-item strong {
+    font-family: "Roboto", Arial, sans-serif;
     display: block;
-    font-size: .98rem;
-    margin-bottom: .35rem;
+    font-size: 1rem;
+    line-height: 1.42;
+    font-weight: 600;
+    margin-bottom: .4rem;
   }
 
   .zz-flow-item span {
+    font-family: "Roboto", Arial, sans-serif;
     display: block;
-    font-size: .83rem;
-    line-height: 1.5;
-    opacity: .66;
+    font-size: .88rem;
+    line-height: 1.58;
+    opacity: .76;
   }
 
   .zz-feature {
@@ -209,8 +230,15 @@ latest_posts:
 
   .zz-feature h4 {
     font-family: "Roboto Slab", Georgia, serif;
+    font-size: 1.42rem;
     font-weight: 400;
-    line-height: 1.35;
+    line-height: 1.38;
+  }
+
+  .zz-feature p,
+  .zz-feature blockquote {
+    font-family: "Roboto", Arial, sans-serif;
+    line-height: 1.68;
   }
 
   .zz-evidence {
@@ -236,15 +264,18 @@ latest_posts:
   }
 
   .zz-question-card h5 {
-    font-family: "Roboto Slab", Georgia, serif;
-    font-weight: 400;
+    font-family: "Roboto", Arial, sans-serif;
+    font-size: 1.08rem;
+    font-weight: 600;
     margin-bottom: .55rem;
   }
 
   .zz-question-card p {
+    font-family: "Roboto", Arial, sans-serif;
+    font-size: .96rem;
     margin: 0;
-    line-height: 1.6;
-    opacity: .74;
+    line-height: 1.68;
+    opacity: .82;
   }
 
   @media (max-width: 820px) {
@@ -309,7 +340,7 @@ latest_posts:
       <div class="zz-eyebrow mb-1">What I can do</div>
       <h3>Turn complex datasets into biological answers</h3>
     </div>
-    <p class="zz-section-note">capabilities, not software lists</p>
+    <p class="zz-section-note">longitudinal · multimodal · clinically grounded</p>
   </div>
 
   <div class="zz-cap-grid">
