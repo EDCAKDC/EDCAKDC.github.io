@@ -438,16 +438,18 @@ latest_posts:
   <div class="zz-feature">
     <div class="row align-items-center g-4">
       <div class="col-md-5">
-        <a href="https://doi.org/10.1038/s41591-026-04578-1">
-          <img
-            src="{{ '/assets/img/nature-figure3.jpg' | relative_url }}"
-            class="img-fluid rounded"
-            alt="Representative analysis from the long-term CAR-T study"
-          >
-        </a>
-        <p class="caption mt-2 mb-0">
-          Representative analysis example · Figure 3 from the study
-        </p>
+<a href="{{ '/assets/img/nature-figure3-hires-white.png' | relative_url }}" target="_blank">
+  <img
+    src="{{ '/assets/img/nature-figure3-preview.png' | relative_url }}"
+    class="img-fluid rounded"
+    alt="Representative analysis from the long-term CAR-T study"
+  >
+</a>
+
+<p class="caption mt-2 mb-0">
+  Representative analysis example · Figure 3 from the study · Click to view full resolution
+</p>
+
       </div>
 
       <div class="col-md-7">
