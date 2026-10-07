@@ -12,7 +12,8 @@ description: Education, research experience, publications, and computational met
 **University of Pennsylvania**  
 M.S.E. in Bioengineering, 2023–2025
 
-**B.S. in Biotechnology**
+**Southwest University**  
+B.S. in Biotechnology, 2019–2023
 
 ## Research Experience
 
@@ -28,7 +29,7 @@ Research in CAR-T cell therapy and cancer immunology spanning single-cell RNA-se
 **Nature Medicine** 32, 3276–3287 (2026).  
 [DOI](https://doi.org/10.1038/s41591-026-04578-1) · [Analysis code](https://github.com/EDCAKDC/GSE311890-CART-analysis)
 
-**Contribution:** performed the computational analysis for the study.
+**Contribution:** led the computational analysis for the study.
 
 ## Selected Computational Methods
 
