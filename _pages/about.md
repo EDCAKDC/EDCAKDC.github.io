@@ -18,7 +18,7 @@ latest_posts:
 
 <style>
   .zz-hero {
-    padding: 1.1rem 0 2.5rem;
+    padding: 1rem 0 2.3rem;
     max-width: 920px;
   }
 
@@ -32,30 +32,21 @@ latest_posts:
     margin-bottom: .7rem;
   }
 
-  .zz-name {
-    font-family: "Roboto Slab", Georgia, serif;
-    font-size: clamp(2.9rem, 6vw, 4.8rem);
-    line-height: 1.02;
-    font-weight: 400;
-    letter-spacing: -.035em;
-    margin: 0 0 .7rem;
-  }
-
   .zz-identity {
     font-family: "Roboto", Arial, sans-serif;
-    font-size: 1.02rem;
-    line-height: 1.65;
-    margin-bottom: 1.3rem;
-    opacity: .82;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.15rem;
+    opacity: .78;
   }
 
   .zz-statement {
     font-family: "Roboto Slab", Georgia, serif;
-    font-size: clamp(1.55rem, 3vw, 2.3rem);
-    line-height: 1.28;
+    font-size: clamp(1.7rem, 3.3vw, 2.55rem);
+    line-height: 1.26;
     font-weight: 400;
     letter-spacing: -.018em;
-    max-width: 880px;
+    max-width: 900px;
     margin: 0 0 1rem;
   }
 
@@ -74,7 +65,7 @@ latest_posts:
     gap: .55rem .9rem;
     font-family: "Roboto", Arial, sans-serif;
     font-size: .93rem;
-    margin-top: 1.1rem;
+    margin-top: 1.05rem;
   }
 
   .zz-contact a {
@@ -107,43 +98,75 @@ latest_posts:
     margin: 0;
   }
 
-  .zz-work-list {
-    border-top: 1px solid rgba(127,127,127,.18);
-  }
-
-  .zz-work-item {
+  .zz-cap-grid {
     display: grid;
-    grid-template-columns: minmax(180px, 1.15fr) minmax(0, 2.2fr);
-    gap: 2rem;
-    padding: 1.35rem 0 1.45rem;
-    border-bottom: 1px solid rgba(127,127,127,.18);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
   }
 
-  .zz-work-item h4 {
+  .zz-cap-card {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(127,127,127,.18);
+    border-radius: 18px;
+    padding: 20px 20px 18px;
+    background: rgba(127,127,127,.02);
+  }
+
+  .zz-cap-card::before {
+    content: "";
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 3px;
+    background: var(--accent);
+  }
+
+  .zz-cap-kicker {
     font-family: "Roboto", Arial, sans-serif;
-    font-size: 1.13rem;
-    line-height: 1.42;
+    color: var(--accent);
+    font-size: .73rem;
+    text-transform: uppercase;
+    letter-spacing: .11em;
+    font-weight: 700;
+    margin-bottom: .65rem;
+  }
+
+  .zz-cap-card h4 {
+    font-family: "Roboto", Arial, sans-serif;
+    font-size: 1.16rem;
+    line-height: 1.38;
     font-weight: 600;
-    margin: 0;
+    margin-bottom: .7rem;
   }
 
-  .zz-work-body p {
+  .zz-cap-card p {
     font-family: "Roboto", Arial, sans-serif;
-    font-size: .98rem;
-    line-height: 1.7;
-    margin: 0 0 .55rem;
-    opacity: .86;
+    font-size: .94rem;
+    line-height: 1.63;
+    margin-bottom: .8rem;
+    opacity: .84;
+  }
+
+  .zz-question {
+    font-family: "Roboto", Arial, sans-serif;
+    padding: .8rem .9rem;
+    border-radius: 10px;
+    background: color-mix(in srgb, var(--accent) 6%, transparent);
+    font-size: .9rem;
+    line-height: 1.52;
+    margin-bottom: .7rem;
+  }
+
+  .zz-question strong {
+    color: var(--accent);
+    font-weight: 700;
   }
 
   .zz-evidence-line {
     font-family: "Roboto", Arial, sans-serif;
-    font-size: .88rem;
-    line-height: 1.55;
-    opacity: .72;
-  }
-
-  .zz-evidence-line strong {
-    opacity: 1;
+    font-size: .82rem;
+    line-height: 1.5;
+    opacity: .68;
   }
 
   .zz-feature {
@@ -201,10 +224,9 @@ latest_posts:
     font-size: 1rem;
   }
 
-  @media (max-width: 720px) {
-    .zz-work-item {
+  @media (max-width: 760px) {
+    .zz-cap-grid {
       grid-template-columns: 1fr;
-      gap: .55rem;
     }
   }
 </style>
@@ -212,11 +234,8 @@ latest_posts:
 <section class="zz-hero">
   <div class="zz-eyebrow">Computational cancer immunology</div>
 
-  <h1 class="zz-name">Zhixuan Zheng</h1>
-
   <div class="zz-identity">
-    <strong>Computational Research Assistant · Ruella Lab · Penn Medicine</strong><br>
-    M.S.E. Bioengineering · University of Pennsylvania
+    Ruella Lab · M.S.E. Bioengineering · University of Pennsylvania
   </div>
 
   <div class="zz-statement">
@@ -242,50 +261,75 @@ latest_posts:
 <section class="my-5">
   <div class="zz-section-head">
     <div>
-      <div class="zz-eyebrow mb-1">Research directions</div>
-      <h3>Problems I work on</h3>
+      <div class="zz-eyebrow mb-1">What I can do</div>
+      <h3>Turn complex datasets into biological answers</h3>
     </div>
     <p class="zz-section-note">questions first · evidence attached</p>
   </div>
 
-  <div class="zz-work-list">
-    <div class="zz-work-item">
-      <h4>Single-cell states & clonal dynamics</h4>
-      <div class="zz-work-body">
-        <p>
-          Resolve how T-cell states change across treatment and time, track persistent or dominant
-          clonotypes, and connect immune-repertoire structure with cellular phenotype.
-        </p>
-        <div class="zz-evidence-line">
-          <strong>Evidence:</strong> Nature Medicine 2026 · 10x scRNA-seq + VDJ/TCR ·
-          <a href="https://github.com/EDCAKDC/GSE311890-CART-analysis">reproducible analysis ↗</a>
-        </div>
+  <div class="zz-cap-grid">
+    <div class="zz-cap-card" style="--accent:#0f766e;">
+      <div class="zz-cap-kicker">Cell-state biology</div>
+      <h4>Reconstruct how immune-cell states change across treatment and time</h4>
+      <p>
+        Resolve heterogeneous T-cell populations and compare functional programs across conditions
+        and longitudinal time points.
+      </p>
+      <div class="zz-question">
+        <strong>Questions I can answer:</strong><br>
+        Which cellular programs emerge, persist, disappear, or become enriched after therapy?
+      </div>
+      <div class="zz-evidence-line">
+        <strong>Evidence:</strong> Nature Medicine 2026 · longitudinal 10x scRNA-seq · differential and pathway analysis
       </div>
     </div>
 
-    <div class="zz-work-item">
-      <h4>Clinical genomics & treatment outcome</h4>
-      <div class="zz-work-body">
-        <p>
-          Test which lymphoma-associated genomic features are linked to treatment response,
-          progression, toxicity, or survival after CAR-T therapy.
-        </p>
-        <div class="zz-evidence-line">
-          <strong>Evidence:</strong> targeted NGS CAR-T cohort · mutation profiling · Kaplan-Meier · Cox and logistic modeling
-        </div>
+    <div class="zz-cap-card" style="--accent:#4f46e5;">
+      <div class="zz-cap-kicker">Clonal dynamics</div>
+      <h4>Track which T-cell clones expand, persist, and dominate over time</h4>
+      <p>
+        Link TCR clonotypes to cellular phenotypes, quantify repertoire diversity and dominance,
+        and follow persistent clones across longitudinal samples.
+      </p>
+      <div class="zz-question">
+        <strong>Questions I can answer:</strong><br>
+        Which clones survive years later, and what cellular states characterize those persistent clones?
+      </div>
+      <div class="zz-evidence-line">
+        <strong>Evidence:</strong> 10x VDJ/TCR · clonotype tracking · repertoire entropy ·
+        <a href="https://github.com/EDCAKDC/GSE311890-CART-analysis">analysis code ↗</a>
       </div>
     </div>
 
-    <div class="zz-work-item">
-      <h4>Multi-omics response biology</h4>
-      <div class="zz-work-body">
-        <p>
-          Integrate proteomic, transcriptomic, cytometry, and clinical measurements to identify
-          response-associated biology and determine whether independent assays support the same mechanism.
-        </p>
-        <div class="zz-evidence-line">
-          <strong>Evidence:</strong> longitudinal Olink proteomics · high-dimensional flow cytometry · cross-dataset harmonization
-        </div>
+    <div class="zz-cap-card" style="--accent:#c76a12;">
+      <div class="zz-cap-kicker">Response & outcome</div>
+      <h4>Connect molecular and cellular features to therapeutic response</h4>
+      <p>
+        Test whether genomic alterations, proteins, or immune states are associated with response,
+        relapse, toxicity, progression, or survival.
+      </p>
+      <div class="zz-question">
+        <strong>Questions I can answer:</strong><br>
+        What separates responders from non-responders, and which signals remain meaningful after clinical adjustment?
+      </div>
+      <div class="zz-evidence-line">
+        <strong>Evidence:</strong> targeted NGS · Olink proteomics · Kaplan-Meier · Cox and logistic modeling
+      </div>
+    </div>
+
+    <div class="zz-cap-card" style="--accent:#b4235a;">
+      <div class="zz-cap-kicker">Multimodal integration</div>
+      <h4>Integrate independent data types into a coherent mechanistic story</h4>
+      <p>
+        Bring together transcriptomics, immune repertoires, flow cytometry, genomics, proteomics,
+        and clinical variables to test whether signals converge on the same biology.
+      </p>
+      <div class="zz-question">
+        <strong>Questions I can answer:</strong><br>
+        Do different assays support the same mechanism, and which evidence is most clinically interpretable?
+      </div>
+      <div class="zz-evidence-line">
+        <strong>Evidence:</strong> Olink · FlowSOM/UMAP · bulk expression · cross-dataset harmonization
       </div>
     </div>
   </div>
