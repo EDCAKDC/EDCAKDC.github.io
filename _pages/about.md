@@ -162,12 +162,6 @@ latest_posts:
     font-weight: 700;
   }
 
-  .zz-evidence-line {
-    font-family: "Roboto", Arial, sans-serif;
-    font-size: .82rem;
-    line-height: 1.5;
-    opacity: .68;
-  }
 
   .zz-feature {
     border: 1px solid rgba(127,127,127,.18);
@@ -216,6 +210,42 @@ latest_posts:
     opacity: .66;
   }
 
+
+  .zz-toolkit {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    border-top: 1px solid rgba(127,127,127,.18);
+  }
+
+  .zz-toolkit-item {
+    padding: 1rem 1.2rem 1.05rem 0;
+    border-bottom: 1px solid rgba(127,127,127,.18);
+  }
+
+  .zz-toolkit-item:nth-child(odd) {
+    padding-right: 1.6rem;
+  }
+
+  .zz-toolkit-item:nth-child(even) {
+    padding-left: 1.6rem;
+    border-left: 1px solid rgba(127,127,127,.14);
+  }
+
+  .zz-toolkit-item h5 {
+    font-family: "Roboto", Arial, sans-serif;
+    font-size: .98rem;
+    font-weight: 600;
+    margin: 0 0 .32rem;
+  }
+
+  .zz-toolkit-item p {
+    font-family: "Roboto", Arial, sans-serif;
+    font-size: .88rem;
+    line-height: 1.55;
+    margin: 0;
+    opacity: .74;
+  }
+
   .zz-nav {
     display: flex;
     flex-wrap: wrap;
@@ -225,8 +255,18 @@ latest_posts:
   }
 
   @media (max-width: 760px) {
-    .zz-cap-grid {
+    .zz-cap-grid,
+    .zz-toolkit {
       grid-template-columns: 1fr;
+    }
+
+    .zz-toolkit-item:nth-child(even) {
+      padding-left: 0;
+      border-left: 0;
+    }
+
+    .zz-toolkit-item:nth-child(odd) {
+      padding-right: 0;
     }
   }
 </style>
@@ -264,7 +304,7 @@ latest_posts:
       <div class="zz-eyebrow mb-1">What I can do</div>
       <h3>Turn complex datasets into biological answers</h3>
     </div>
-    <p class="zz-section-note">questions first · evidence attached</p>
+    <p class="zz-section-note">questions first</p>
   </div>
 
   <div class="zz-cap-grid">
@@ -279,9 +319,6 @@ latest_posts:
         <strong>Questions I can answer:</strong><br>
         Which cellular programs emerge, persist, disappear, or become enriched after therapy?
       </div>
-      <div class="zz-evidence-line">
-        <strong>Evidence:</strong> Nature Medicine 2026 · longitudinal 10x scRNA-seq · differential and pathway analysis
-      </div>
     </div>
 
     <div class="zz-cap-card" style="--accent:#4f46e5;">
@@ -294,10 +331,6 @@ latest_posts:
       <div class="zz-question">
         <strong>Questions I can answer:</strong><br>
         Which clones survive years later, and what cellular states characterize those persistent clones?
-      </div>
-      <div class="zz-evidence-line">
-        <strong>Evidence:</strong> 10x VDJ/TCR · clonotype tracking · repertoire entropy ·
-        <a href="https://github.com/EDCAKDC/GSE311890-CART-analysis">analysis code ↗</a>
       </div>
     </div>
 
@@ -312,9 +345,6 @@ latest_posts:
         <strong>Questions I can answer:</strong><br>
         What separates responders from non-responders, and which signals remain meaningful after clinical adjustment?
       </div>
-      <div class="zz-evidence-line">
-        <strong>Evidence:</strong> targeted NGS · Olink proteomics · Kaplan-Meier · Cox and logistic modeling
-      </div>
     </div>
 
     <div class="zz-cap-card" style="--accent:#b4235a;">
@@ -327,9 +357,6 @@ latest_posts:
       <div class="zz-question">
         <strong>Questions I can answer:</strong><br>
         Do different assays support the same mechanism, and which evidence is most clinically interpretable?
-      </div>
-      <div class="zz-evidence-line">
-        <strong>Evidence:</strong> Olink · FlowSOM/UMAP · bulk expression · cross-dataset harmonization
       </div>
     </div>
   </div>
@@ -378,6 +405,47 @@ latest_posts:
           <a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE311890"><strong>GEO ↗</strong></a>
         </p>
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="my-5">
+  <div class="zz-section-head">
+    <div>
+      <div class="zz-eyebrow mb-1">Computational research capabilities</div>
+      <h3>Methods I use to answer those questions</h3>
+    </div>
+  </div>
+
+  <div class="zz-toolkit">
+    <div class="zz-toolkit-item">
+      <h5>Single-cell & immune repertoire</h5>
+      <p>10x scRNA-seq/VDJ integration, cell-state analysis, clonotype tracking, repertoire diversity, Seurat, Harmony, scRepertoire, pySCENIC/AUCell.</p>
+    </div>
+
+    <div class="zz-toolkit-item">
+      <h5>Clinical genomics & outcome modeling</h5>
+      <p>Mutation and VAF analysis, Kaplan-Meier, Cox regression, logistic regression, odds ratios, and multiple-testing correction.</p>
+    </div>
+
+    <div class="zz-toolkit-item">
+      <h5>Transcriptomics & functional analysis</h5>
+      <p>Bulk RNA-seq workflows, differential expression, pathway enrichment, DESeq2, edgeR, limma, STAR, featureCounts, Salmon, and GSEA.</p>
+    </div>
+
+    <div class="zz-toolkit-item">
+      <h5>High-dimensional immune profiling</h5>
+      <p>FlowSOM, UMAP, cluster annotation, abundance summaries, z-score heatmaps, and CAR-positive versus CAR-negative comparisons.</p>
+    </div>
+
+    <div class="zz-toolkit-item">
+      <h5>Epigenomics & regulatory-state analysis</h5>
+      <p>ChIP-seq, ATAC-seq, CUT&RUN-oriented workflows, MACS2, deepTools, pyGenomeTracks, ChIPseeker, and regulon analysis.</p>
+    </div>
+
+    <div class="zz-toolkit-item">
+      <h5>Systems & metabolic modeling</h5>
+      <p>COBRApy, FBA/FVA, gene/reaction knockout, synthetic lethality, E-Flux constraints, nutrient constraints, and flux rewiring.</p>
     </div>
   </div>
 </section>
