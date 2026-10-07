@@ -1,14 +1,12 @@
 github_users:
-  - torvalds
-  - alshedivat
+  - EDCAKDC
 
 repo_description_lines_max: 2
 
 github_repos:
-  - alshedivat/al-folio
-  - jekyll/jekyll
-  - twbs/bootstrap
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - mathjax/MathJax
-  - jpswalsh/academicons
+  - EDCAKDC/GSE311890-CART-analysis
+  - EDCAKDC/tcr-clonotype-analysis
+  - EDCAKDC/metabolic-systems-biology
+  - EDCAKDC/Single-Cell-RNA-SEQ
+  - EDCAKDC/RNA-SEQ
+  - EDCAKDC/Machine-Learning
