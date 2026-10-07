@@ -18,112 +18,115 @@ latest_posts:
 
 <div class="row">
   <div class="col-lg-9">
-    <p class="text-uppercase small mb-2" style="letter-spacing:.14em; font-weight:600; opacity:.72;">
+    <p class="text-uppercase small mb-2" style="letter-spacing:.16em; font-weight:600; opacity:.68;">
       Computational Cancer Immunology
     </p>
-    <h2 style="font-size:clamp(2rem,5vw,3.4rem); line-height:1.08; margin-bottom:1rem;">
+    <h2 style="font-size:clamp(2.15rem,5vw,3.6rem); line-height:1.06; margin-bottom:1.15rem;">
       From high-dimensional immune data<br>
-      <span style="opacity:.68;">to translational insight.</span>
+      <span style="opacity:.62;">to mechanisms, biomarkers, and response.</span>
     </h2>
-    <p class="lead" style="max-width:820px;">
-      I work at the intersection of <strong>CAR-T cell therapy, single-cell genomics,
-      immune-repertoire analysis, and translational bioinformatics</strong>.
+    <p class="lead" style="max-width:850px;">
+      I study <strong>CAR-T cell biology and tumor–immune interactions</strong> using
+      single-cell genomics, immune-repertoire analysis, cancer genomics, and multimodal
+      translational data.
     </p>
     <p style="max-width:860px;">
-      My research uses molecular, cellular, and clinical data to study immune-cell states,
-      clonal dynamics, and determinants of therapeutic response. I am particularly interested
-      in computational approaches that connect mechanistic biology with clinically meaningful
-      questions in cellular therapy and tumor immunology.
+      My work focuses on the structure and evolution of immune-cell states, clonal
+      persistence, and determinants of therapeutic response — with an emphasis on analyses
+      that connect mechanistic biology to clinically meaningful questions.
     </p>
   </div>
 </div>
 
 <div class="mt-5 mb-5">
-  <div class="d-flex justify-content-between align-items-end flex-wrap mb-3">
+  <div class="d-flex justify-content-between align-items-end flex-wrap mb-4">
     <div>
-      <p class="text-uppercase small mb-1" style="letter-spacing:.12em; font-weight:600; opacity:.65;">Research pipeline</p>
-      <h3 class="mb-0">How I approach a biological question</h3>
+      <p class="text-uppercase small mb-1" style="letter-spacing:.14em; font-weight:600; opacity:.58;">
+        Research architecture
+      </p>
+      <h3 class="mb-0">How I move from data to biological insight</h3>
     </div>
-    <p class="small mb-1 mt-2" style="opacity:.62;">multimodal data → reproducible computation → biological interpretation</p>
+    <p class="small mb-1 mt-2" style="opacity:.55;">
+      question-driven · multimodal · longitudinal · translational
+    </p>
   </div>
 
-  <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(185px,1fr)); gap:12px;">
+  <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(215px,1fr)); gap:14px;">
 
-    <div style="border:1px solid rgba(127,127,127,.25); border-radius:16px; padding:20px; min-height:220px;">
-      <div class="small text-uppercase mb-3" style="letter-spacing:.12em; opacity:.55;">01 · Data</div>
-      <h5 class="mb-3">Multimodal immune data</h5>
-      <p class="small mb-3" style="opacity:.75;">Start from complementary views of tumor and immune biology.</p>
-      <div class="d-flex flex-wrap gap-1">
-        <span class="badge rounded-pill text-bg-light">scRNA-seq</span>
-        <span class="badge rounded-pill text-bg-light">TCR / VDJ</span>
-        <span class="badge rounded-pill text-bg-light">Flow cytometry</span>
-        <span class="badge rounded-pill text-bg-light">Bulk RNA-seq</span>
-        <span class="badge rounded-pill text-bg-light">Genomics</span>
-        <span class="badge rounded-pill text-bg-light">Proteomics</span>
-      </div>
+    <div style="border:1px solid rgba(127,127,127,.20); border-radius:18px; padding:22px; min-height:235px;">
+      <div class="small text-uppercase mb-3" style="letter-spacing:.13em; opacity:.48;">01 · Observe</div>
+      <h4 class="mb-3" style="font-size:1.14rem;">Multimodal immune systems</h4>
+      <p class="small" style="opacity:.73;">
+        Profile tumor and immune biology across complementary molecular and cellular measurements.
+      </p>
+      <p class="small mb-0" style="line-height:1.8;">
+        <strong>Single-cell RNA-seq</strong><br>
+        TCR / VDJ repertoires<br>
+        Flow cytometry<br>
+        Bulk transcriptomics<br>
+        Cancer genomics & proteomics
+      </p>
     </div>
 
-    <div style="border:1px solid rgba(127,127,127,.25); border-radius:16px; padding:20px; min-height:220px;">
-      <div class="small text-uppercase mb-3" style="letter-spacing:.12em; opacity:.55;">02 · Process</div>
-      <h5 class="mb-3">QC & integration</h5>
-      <p class="small mb-3" style="opacity:.75;">Build analysis-ready datasets with reproducible preprocessing and harmonization.</p>
-      <div class="d-flex flex-wrap gap-1">
-        <span class="badge rounded-pill text-bg-light">Seurat</span>
-        <span class="badge rounded-pill text-bg-light">Harmony</span>
-        <span class="badge rounded-pill text-bg-light">STAR</span>
-        <span class="badge rounded-pill text-bg-light">Salmon</span>
-        <span class="badge rounded-pill text-bg-light">Git</span>
-        <span class="badge rounded-pill text-bg-light">Conda</span>
-      </div>
+    <div style="border:1px solid rgba(127,127,127,.20); border-radius:18px; padding:22px; min-height:235px;">
+      <div class="small text-uppercase mb-3" style="letter-spacing:.13em; opacity:.48;">02 · Resolve</div>
+      <h4 class="mb-3" style="font-size:1.14rem;">Cell states & clonal structure</h4>
+      <p class="small" style="opacity:.73;">
+        Decompose heterogeneous immune populations into interpretable cellular and clonal programs.
+      </p>
+      <p class="small mb-0" style="line-height:1.8;">
+        Cell-state annotation<br>
+        Longitudinal clonotype tracking<br>
+        Repertoire diversity<br>
+        Unsupervised clustering<br>
+        Regulon & trajectory analysis
+      </p>
     </div>
 
-    <div style="border:1px solid rgba(127,127,127,.25); border-radius:16px; padding:20px; min-height:220px;">
-      <div class="small text-uppercase mb-3" style="letter-spacing:.12em; opacity:.55;">03 · Decode</div>
-      <h5 class="mb-3">States & repertoires</h5>
-      <p class="small mb-3" style="opacity:.75;">Resolve cellular phenotypes, clonal structure, longitudinal change, and immune programs.</p>
-      <div class="d-flex flex-wrap gap-1">
-        <span class="badge rounded-pill text-bg-light">scRepertoire</span>
-        <span class="badge rounded-pill text-bg-light">FlowSOM</span>
-        <span class="badge rounded-pill text-bg-light">UMAP</span>
-        <span class="badge rounded-pill text-bg-light">SCENIC</span>
-        <span class="badge rounded-pill text-bg-light">Clonotypes</span>
-      </div>
+    <div style="border:1px solid rgba(127,127,127,.20); border-radius:18px; padding:22px; min-height:235px;">
+      <div class="small text-uppercase mb-3" style="letter-spacing:.13em; opacity:.48;">03 · Infer</div>
+      <h4 class="mb-3" style="font-size:1.14rem;">Molecular programs & associations</h4>
+      <p class="small" style="opacity:.73;">
+        Quantify biological differences and identify pathways, signatures, and outcome-associated signals.
+      </p>
+      <p class="small mb-0" style="line-height:1.8;">
+        Differential expression<br>
+        Pathway & gene-set analysis<br>
+        Survival modeling<br>
+        Clinical association testing<br>
+        Constraint-based systems biology
+      </p>
     </div>
 
-    <div style="border:1px solid rgba(127,127,127,.25); border-radius:16px; padding:20px; min-height:220px;">
-      <div class="small text-uppercase mb-3" style="letter-spacing:.12em; opacity:.55;">04 · Model</div>
-      <h5 class="mb-3">Statistics & pathways</h5>
-      <p class="small mb-3" style="opacity:.75;">Quantify molecular differences and connect them to pathways, outcomes, and mechanisms.</p>
-      <div class="d-flex flex-wrap gap-1">
-        <span class="badge rounded-pill text-bg-light">DESeq2</span>
-        <span class="badge rounded-pill text-bg-light">edgeR</span>
-        <span class="badge rounded-pill text-bg-light">limma</span>
-        <span class="badge rounded-pill text-bg-light">GSEA / fgsea</span>
-        <span class="badge rounded-pill text-bg-light">Cox / KM</span>
-        <span class="badge rounded-pill text-bg-light">COBRApy</span>
-      </div>
-    </div>
-
-    <div style="border:1px solid rgba(127,127,127,.25); border-radius:16px; padding:20px; min-height:220px;">
-      <div class="small text-uppercase mb-3" style="letter-spacing:.12em; opacity:.55;">05 · Translate</div>
-      <h5 class="mb-3">Biological insight</h5>
-      <p class="small mb-3" style="opacity:.75;">Turn computational signals into interpretable hypotheses relevant to cellular therapy.</p>
-      <div class="d-flex flex-wrap gap-1">
-        <span class="badge rounded-pill text-bg-light">Cell states</span>
-        <span class="badge rounded-pill text-bg-light">Persistence</span>
-        <span class="badge rounded-pill text-bg-light">Biomarkers</span>
-        <span class="badge rounded-pill text-bg-light">Response</span>
-        <span class="badge rounded-pill text-bg-light">Mechanism</span>
-      </div>
+    <div style="border:1px solid rgba(127,127,127,.20); border-radius:18px; padding:22px; min-height:235px;">
+      <div class="small text-uppercase mb-3" style="letter-spacing:.13em; opacity:.48;">04 · Translate</div>
+      <h4 class="mb-3" style="font-size:1.14rem;">Mechanism & therapeutic response</h4>
+      <p class="small" style="opacity:.73;">
+        Integrate molecular and clinical evidence into hypotheses relevant to cellular therapy.
+      </p>
+      <p class="small mb-0" style="line-height:1.8;">
+        Persistence & memory<br>
+        Exhaustion & activation<br>
+        Response biomarkers<br>
+        Resistance mechanisms<br>
+        Patient-level interpretation
+      </p>
     </div>
 
   </div>
 
-  <div class="mt-3" style="border-radius:14px; padding:14px 18px; background:rgba(127,127,127,.07);">
-    <div class="d-flex flex-wrap justify-content-between gap-2 small">
-      <span><strong>Core languages:</strong> R · Python · Bash</span>
-      <span><strong>Environment:</strong> Linux · Conda · Git</span>
-      <span><strong>Output:</strong> reproducible pipelines · publication-ready analysis</span>
+  <div class="mt-4" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:12px;">
+    <div style="padding:14px 16px; border-top:2px solid currentColor;">
+      <div class="small text-uppercase mb-1" style="letter-spacing:.1em; opacity:.48;">Single-cell & repertoire</div>
+      <div class="small">Seurat · Harmony · scRepertoire · SCENIC · UMAP</div>
+    </div>
+    <div style="padding:14px 16px; border-top:2px solid currentColor;">
+      <div class="small text-uppercase mb-1" style="letter-spacing:.1em; opacity:.48;">Transcriptomic & pathway analysis</div>
+      <div class="small">DESeq2 · edgeR · limma · GSEA / fgsea · GSVA</div>
+    </div>
+    <div style="padding:14px 16px; border-top:2px solid currentColor;">
+      <div class="small text-uppercase mb-1" style="letter-spacing:.1em; opacity:.48;">Clinical & systems modeling</div>
+      <div class="small">Cox / Kaplan–Meier · regression · FlowSOM · COBRApy</div>
     </div>
   </div>
 </div>
@@ -139,22 +142,30 @@ latest_posts:
     </a>
     <p class="caption mt-2"><strong>Representative analysis example.</strong> Figure 3 from the study.</p>
   </div>
+
   <div class="col-md-7">
-    <p class="text-uppercase small mb-1" style="letter-spacing:.1em; opacity:.6;">Selected publication</p>
+    <p class="text-uppercase small mb-1" style="letter-spacing:.11em; opacity:.55;">
+      Selected publication
+    </p>
     <h4><em>Decade-long persistence of CD19 CAR T cells in B cell lymphomas</em></h4>
     <p><strong>Nature Medicine · 2026 · Co-author</strong></p>
+
     <p>
       I performed the <strong>computational analysis for the study</strong>, integrating
       single-cell transcriptomic and immune-repertoire data to characterize long-term
       persisting CAR-T cells.
     </p>
-    <p>
-      <strong>Analysis scope:</strong> single-cell state characterization, CAR<sup>+</sup>
-      versus CAR<sup>−</sup> comparisons, peak-versus-year-9.3 longitudinal analysis,
-      differential expression, pathway programs, TCR clonotype dynamics, and
-      regulatory-state analysis.
-    </p>
+
+    <div style="border-left:3px solid currentColor; padding-left:16px; margin:18px 0;">
+      <p class="mb-1"><strong>Longitudinal CAR-T biology</strong></p>
+      <p class="small mb-0" style="opacity:.74;">
+        Cell-state evolution · CAR<sup>+</sup>/CAR<sup>−</sup> comparisons · peak vs year 9.3 ·
+        differential expression · pathway programs · TCR clonotype dynamics
+      </p>
+    </div>
+
     <blockquote>“Z.Z. performed the computational analysis.” — Author Contributions</blockquote>
+
     <p>
       <a href="https://doi.org/10.1038/s41591-026-04578-1"><strong>Paper ↗</strong></a>
       &nbsp;·&nbsp;
@@ -167,20 +178,25 @@ latest_posts:
 
 <hr>
 
-### Research domains
+<div class="d-flex justify-content-between align-items-end flex-wrap mb-3">
+  <div>
+    <p class="text-uppercase small mb-1" style="letter-spacing:.12em; opacity:.55;">Research directions</p>
+    <h3 class="mb-0">Questions I care about</h3>
+  </div>
+</div>
 
-<div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:16px;">
+<div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:18px;">
   <div style="border-left:3px solid currentColor; padding:6px 0 6px 18px;">
-    <h5>CAR-T & tumor immunology</h5>
-    <p class="mb-0">Long-term persistence, cell-state evolution, treatment response, memory, exhaustion, and translational cellular therapy.</p>
+    <h5>Persistence</h5>
+    <p class="mb-0">What allows engineered T cells to persist, adapt, and remain functional over years?</p>
   </div>
   <div style="border-left:3px solid currentColor; padding:6px 0 6px 18px;">
-    <h5>Single-cell & immune repertoire</h5>
-    <p class="mb-0">scRNA-seq, longitudinal TCR clonotypes, repertoire diversity, cell-state annotation, regulon activity, and pathway analysis.</p>
+    <h5>Clonal evolution</h5>
+    <p class="mb-0">How do immune repertoires and dominant clonotypes change across treatment and time?</p>
   </div>
   <div style="border-left:3px solid currentColor; padding:6px 0 6px 18px;">
-    <h5>Translational genomics</h5>
-    <p class="mb-0">Cancer genomics, survival modeling, proteomics, flow cytometry, bulk transcriptomics, and multi-omics integration.</p>
+    <h5>Response & resistance</h5>
+    <p class="mb-0">Which molecular and cellular features explain therapeutic response, failure, or relapse?</p>
   </div>
 </div>
 
