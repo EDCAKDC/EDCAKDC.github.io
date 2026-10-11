@@ -388,7 +388,7 @@ latest_posts:
       </div>
 
       <div class="col-md-7">
-        <div class="zz-feature-label mb-2">Nature Medicine · 2026 · Computational Analysis</div>
+        <div class="zz-feature-label mb-2">Nature Medicine · 2026 · Fourth Author · Computational Analysis</div>
         <h4><em>Decade-long persistence of CD19 CAR T cells in B cell lymphomas</em></h4>
 
         <p>
