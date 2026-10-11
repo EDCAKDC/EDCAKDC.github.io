@@ -388,11 +388,11 @@ latest_posts:
       </div>
 
       <div class="col-md-7">
-        <div class="zz-feature-label mb-2">Nature Medicine · 2026 · Fourth author</div>
+        <div class="zz-feature-label mb-2">Nature Medicine · 2026 · Computational Analysis</div>
         <h4><em>Decade-long persistence of CD19 CAR T cells in B cell lymphomas</em></h4>
 
         <p>
-          I <strong>led the computational analysis</strong> for the study, integrating single-cell
+          I <strong>performed the computational analysis</strong> for the study, integrating single-cell
           transcriptomic and immune-repertoire data to characterize long-term persisting CAR-T cells,
           state evolution, and clonotype dynamics.
         </p>
